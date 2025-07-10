@@ -7,15 +7,6 @@
 
 
 
-- name: Variables demo
-  hosts: localhost
-  connection: local
-  vars:
-    a: 100
-  tasks:
-    - name: Print variable
-      ansible.builtin.debug:
-        msg: a - {{ a }}
 
 - name: Variables demo1
   hosts: all
