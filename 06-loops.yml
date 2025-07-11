@@ -4,7 +4,7 @@
   tasks:
     - name: Loop
       ansible.builtin.shell:
-        msg: Hello - {{ item }}
+        msg: "Hello - {{ item }}"
       loop:
         - one
         - two
