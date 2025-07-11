@@ -8,3 +8,8 @@
       ansible.builtin.debug:
         msg: Hello
       when: x > 200
+
+    - name: Print Boolean
+      ansible.builtin.debug:
+        msg: Yes
+      when: my_boolean
