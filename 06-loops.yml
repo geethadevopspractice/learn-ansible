@@ -8,4 +8,9 @@
       loop:
         - one
         - two
-
+    - name: Loop1
+      ansible.builtin.debug:
+        msg: Fruit Name - {{ item.name }}, cost - {{ item.cost }}
+      loop:
+        - {name: orange, cost: 2$ }
+        - {name: Apple, cost: 1$ }
