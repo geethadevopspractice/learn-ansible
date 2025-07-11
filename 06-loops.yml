@@ -1,5 +1,4 @@
 - name: Loops Demo
-  become: true
   hosts: localhost
   connection: local
   tasks:
