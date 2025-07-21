@@ -4,6 +4,7 @@
 # role level
 # play level
 # inventory level
+#- group level
 
 
 
@@ -83,4 +84,30 @@
         msg: "string - {{ my_string }} number - {{ my_number }} boolean - {{ my_boolean1 }}"
 
 
-   msg: "First value in the list is - {{ my_list[0] }} First value in map - {{ my_map2['some1'] }}"
+#   msg: "First value in the list is - {{ my_list[0] }} First value in map - {{ my_map2['some1'] }}"
+- name: Variable demo1
+  hosts: all
+  tasks:
+    - name: Variable from Inventory
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
+- name: Facts demo1
+  hosts: all
+  tasks:
+    - name: Print a fact
+      ansible.builtin.debug:
+        msg: ansible_architecture - if {{ ansible_architecture }}
+
+
+- name: Register results
+  hosts: localhost
+  connections: local
+  tasks:
+    - name: Get uptime
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{ out }}"
