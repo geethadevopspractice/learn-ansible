@@ -1,0 +1,9 @@
+- name: Vault Demo
+  hosts: localhost
+  connection: local
+  vars:
+    Message:
+  tasks:
+    - name: Print Message
+      ansible.builtin.debug:
+        msg: "{{ Message }}"
