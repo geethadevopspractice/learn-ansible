@@ -40,11 +40,9 @@
     - name: Get uptime
       ansible.builtin.debug:
         msg: out
-#
-#
-#    - name: Print out
-#      ansible.builtin.debug:
-#        msg: "{{ out.stdout }}"
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{ out.stdout }}"
 
 
 
