@@ -24,7 +24,7 @@
   tasks:
     - name: Variable from Inventory
       ansible.builtin.debug:
-        msg: URL - {{ URL1 }}
+        msg: URL - {{ URL }}
 
 - name: Facts demo1
   hosts: all
