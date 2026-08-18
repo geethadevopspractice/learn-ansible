@@ -9,29 +9,29 @@
 
 
 
-- name: Variables demo
-  hosts: localhost
-  connection: local
-  vars:
-    a: 100
-  tasks:
-    - name: Print variable
-      ansible.builtin.debug:
-        msg: a - {{ a }}
+#- name: Variables demo
+#  hosts: localhost
+#  connection: local
+#  vars:
+#    a: 100
+#  tasks:
+#    - name: Print variable
+#      ansible.builtin.debug:
+#        msg: a - {{ a }}
 
-#- name: Variables demo1
-#  hosts: all
-#  tasks:
-#    - name: Variable from Inventory
-#      ansible.builtin.debug:
-#        msg: URL - {{ URL }}
-#
-#- name: Facts demo1
-#  hosts: all
-#  tasks:
-#    - name: Print a fact
-#      ansible.builtin.debug:
-#        msg: ansible_architecture - {{ ansible_architecture }}
+- name: Variables demo1
+  hosts: all
+  tasks:
+    - name: Variable from Inventory
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
+- name: Facts demo1
+  hosts: all
+  tasks:
+    - name: Print a fact
+      ansible.builtin.debug:
+        msg: ansible_architecture - {{ ansible_architecture }}
 #
 #- name: Register results
 #  hosts: localhost
