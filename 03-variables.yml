@@ -101,7 +101,7 @@
 
 - name: Register results
   hosts: localhost
-  connections: local
+  connection: local
   tasks:
     - name: Get uptime
       ansible.builtin.shell: uptime
