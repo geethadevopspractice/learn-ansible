@@ -4,10 +4,10 @@
   vars:
     name: John
   tasks:
-#    - name: Copy a file
-#      ansible.builtin.copy:
-#        src: sample.txt
-#        dest: /tmp/sample.text
+    - name: Copy a file
+      ansible.builtin.copy:
+        src: sample.txt
+        dest: /tmp/sample.text
 
     - name: Copy a file
       ansible.builtin.template:
