@@ -1,6 +1,9 @@
 - name: Loops Demo
   hosts: localhost
   connection: local
+
+#  vars_files:
+#    - users.yml
   tasks:
     - name: Loop
       ansible.builtin.debug:
@@ -14,3 +17,17 @@
       loop:
         - {name: orange, cost: 2$ }
         - {name: Apple, cost: 1$ }
+
+#  loop_control
+#
+#  Sometimes you don't want to use item.
+#
+#You can rename it:
+#
+#  - name: Create users
+#    ansible.builtin.user:
+#      name: "{{ user.name }}"
+#      shell: "{{ user.shell }}"
+#    loop: "{{ users }}"
+#    loop_control:
+#      loop_var: user
