@@ -3,7 +3,7 @@
   connection: local
 
 #  vars_files:
-#    - users.yml
+#    - users.yml - you have to create this file
   tasks:
     - name: Loop
       ansible.builtin.debug:
