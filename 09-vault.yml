@@ -1,8 +1,23 @@
+#- name: Vault Demo
+#  hosts: localhost
+#  connection: local
+#  vars:
+#    Message:
+#  tasks:
+#    - name: Print Message
+#      ansible.builtin.debug:
+#        msg: "{{ Message }}"
 - name: Vault Demo
   hosts: localhost
   connection: local
   vars:
-    Message:
+    Message: !vault |
+      $ANSIBLE_VAULT;1.1;AES256
+      65636362653766383937336537343163333737663231346631396261663866363333333331343062
+      6365633566333636333566666133653561663365353362650a356566383761323661636538363262
+      66333461393536613632376163366135333064313861396137623731326166336532303835313666
+      3334316562656336350a636435323332646164666362333964303839653561623665383936363865
+      3866
   tasks:
     - name: Print Message
       ansible.builtin.debug:
